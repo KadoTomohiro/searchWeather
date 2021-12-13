@@ -5,19 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>Hello Weather</h1>
 
-    <input type="text" id="cityName"><button id="search">Search</button>
-
-    <ul>
-        <li>天気:<span class="description"></span></li>
-        <li>気温:<span class="temperature"></span></li>
-        <li>風速:<span class="wind"></span></li>
+    <input type="text" id="cityName"><button id="search">Search</button><span class="notation"></span>
+    <!--  検索結果表示エリア  -->
+    <ul id="cityWeathers">
     </ul>
 
-
+    <!--    検索結果テンプレート-->
+    <template id='result'>
+        <li>
+            <dl>
+                <dt>都市名:</dt>
+                <dd class="city">
+                </dd>
+                <dt>天気:</dt>
+                <dd class="description"></dd>
+                <dt>気温:</dt>
+                <dd class="temperature"></dd>
+                <dt>風速:</dt>
+                <dd class="wind"></dd>
+            </dl>
+        </li>
+    </template>
     <script src="main.js"></script>
 </body>
 </html>
